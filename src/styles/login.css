@@ -1,0 +1,21 @@
+#login-table{
+    border-radius: 7px;
+    background-color: white;
+}
+
+.blog-name{
+    font-family: 幼圆;
+    color: darkslategray;
+}
+
+.login-table-divider{
+    height: 1px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+.login-table-divider span{
+    position: relative;
+    top: -8px;
+    background: #fff;
+    padding: 0 20px;
+}
