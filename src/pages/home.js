@@ -9,6 +9,7 @@ class Home extends React.Component {
     render() {
         return (
             <div className="media col-xs-12 col-sm-offset-2 col-sm-8">
+                <nav className="navbar navbar-transparent"/>
                 <Media/>
             </div>
         );

@@ -71,6 +71,7 @@ class Login extends React.Component {
     render() {
         return (
             <div className="container">
+                <nav className="navbar navbar-transparent"/>
                 <div className="col-xs-12 col-sm-offset-4 col-sm-4" id="login-table">
                     <h1 className="text-center page-header blog-name">朝暮博客</h1>
                     <Alert status={this.state.status}/>
