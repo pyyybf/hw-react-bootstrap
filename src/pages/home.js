@@ -1,4 +1,5 @@
 import React from 'react'
+import Media from "../component/media";
 
 class Home extends React.Component {
     constructor() {
@@ -7,8 +8,8 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div className="container">
-
+            <div className="media col-xs-12 col-sm-offset-2 col-sm-8">
+                <Media/>
             </div>
         );
     }

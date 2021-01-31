@@ -12,28 +12,19 @@ class Alert extends React.Component {
         } else if (this.props.status == 1) {
             return (
                 <div className="alert alert-danger">
-                    <a href="#" className="close" data-dismiss="alert">
-                        &times;
-                    </a>
-                    请填写用户名和密码！
+                    <p className="text-center">请填写用户名和密码！</p>
                 </div>
             );
         } else if (this.props.status == 2) {
             return (
                 <div className="alert alert-danger">
-                    <a href="#" className="close" data-dismiss="alert">
-                        &times;
-                    </a>
-                    用户名长度应该为<strong>6-12位字母、数字或下划线</strong>！
+                    <p className="text-center">用户名长度应该为<strong>6-12位字母、数字或下划线</strong>！</p>
                 </div>
             );
         } else if (this.props.status == 3) {
             return (
                 <div className="alert alert-danger">
-                    <a href="#" className="close" data-dismiss="alert">
-                        &times;
-                    </a>
-                    密码长度应该为<strong>6-12位字母或数字</strong>！
+                    <p className="text-center">密码长度应该为<strong>6-12位字母或数字</strong>！</p>
                 </div>
             );
         }
@@ -53,6 +44,8 @@ class Login extends React.Component {
     }
 
     handleLogin(event) {
+        console.log(this.state)
+        this.setState({status: 0})
         if (this.state.username == '' || this.state.password == '') {
             this.setState({status: 1})
         } else if (this.state.username.length < 6 || this.state.username.length > 12) {
