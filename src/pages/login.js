@@ -27,6 +27,12 @@ class Alert extends React.Component {
                     <p className="text-center">密码长度应该为<strong>6-12位字母或数字</strong>！</p>
                 </div>
             );
+        } else if (this.props.status == 4) {
+            return (
+                <div className="alert alert-danger">
+                    <p className="text-center"><strong>用户名或密码</strong>错误！</p>
+                </div>
+            );
         }
     }
 }
@@ -53,7 +59,12 @@ class Login extends React.Component {
         } else if (this.state.password.length < 6 || this.state.password.length > 12) {
             this.setState({status: 3})
         } else {
-            this.props.history.push('/home')
+            //暂时用用户名username和密码123456代替，等待与后端对接
+            if (this.state.username != 'username' || this.state.password != '123456') {
+                this.setState({status: 4})
+            } else {
+                this.props.history.push('/home')
+            }
         }
         event.preventDefault();
     }
@@ -111,7 +122,7 @@ class Login extends React.Component {
                         </div>
                     </form>
                     <h5 className="text-center page-header">其他登录方式</h5>
-                    <img className="col-sm-12" src="https://s3.ax1x.com/2021/01/31/yViNG9.png"/>
+                    <img className="col-xs-12 col-sm-12" src="https://s3.ax1x.com/2021/01/31/yViNG9.png"/>
                 </div>
             </div>
         );

@@ -10,7 +10,7 @@ class MediaItem extends React.Component {
         return (
             <div className="media-item">
                 <div className="media-left media-top">
-                    <img src={this.props.data.avatar} className="media-object" style={{'width': '80px'}}/>
+                    <img src={this.props.data.avatar} className="media-object" style={{width: '60px'}}/>
                 </div>
                 <div className="media-body">
                     <a href="#"><h4 className="media-heading">{this.props.data.title}</h4></a>
